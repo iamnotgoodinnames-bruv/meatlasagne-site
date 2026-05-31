@@ -1,25 +1,365 @@
-<h1 style="text-align: center"> This is a pretty good lasagne recipe</h1>
-<h2 style="text-align: center">| Time: between 3 minutes and 253 years | Servings: depends on how much each person is hungry | Rating: pretty good(by me)</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This is a pretty good lasagne recipe</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #f5f0e8;
+    --dark: #1a1510;
+    --brown: #6b4c2a;
+    --rust: #9e3d1f;
+    --gold: #c9a84c;
+    --light-brown: #d4b896;
+  }
 
-<h3> Ingredients For Dough:</h3>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-<p> - 12,484 grains of durum wheat flour</p><p> - 283.5 grams of egg</p><p> - 12,000 microsiemens/cm in a clean liter of water worth of salt</p>
-<h3>Ingredients For Sauce:</h3>
-<p>- 0.000096 cubic fathoms of ground beef</p><p>- 40 moles worth of tomato sauce</p><p>- 9.09 shekels of onion</p><p>- 0.175 minas of carrot</p><p>- 24,340,375,800,000,000,000,000,000,000 Zimbabwe dollars worth of celery</p><p>- 75 carats of wine</p><h3>Cheese:</h3><p>- 60,221,407,600,000,000,000,000,000 atoms of cheese</p>
+  body {
+    background-color: var(--cream);
+    color: var(--dark);
+    font-family: 'EB Garamond', serif;
+    font-size: 17px;
+    line-height: 1.8;
+    padding: 0;
+  }
 
-<br><h3>Instructions For Sauce: </h3><p>Step 1 - Soffritto Initialization:
-Apply thermal energy to a pan until it reaches an unspecified temperature measurable in Rankine. Introduce a 3:1 molar ratio of canola to olive oil in a quantity sufficient to cover the surface area of your pan in a single monolayer of liquid. Introduce the 9.09 shekels of diced onion, 0.175 minas of carrot and 2.43 * 10^28¸ Zimbabwe dollars worth of celery root into the heated lipid solution. Agitate occasionally until the Maillard reaction has progressed to a visually satisfactory degree.</p><p>Step 2 - Bovine Matter Integration:
-Introduce 0.000096 cubic fathoms of ground bovine matter into the pan incrementally, in chunks no larger than approximately 0.0000000043 cubic fathoms. Allow 0.00000000095 years to pass.</p><p>Step 3 - Wine Deglazation:
-Add 75 carats of fermented grape solution and redistribute the 0.000096 cubic fathoms of bovine matter across the pan surface until all matter has completed the Maillard reaction.</p><p>Step 4 - Sauce Assembly:
-Introduce 40 moles of tomato sauce. Season with 12,000 microsiemens/cm worth of salt, an unspecified quantity of pepper, and nutmeg to taste (amounts left as an exercise to the reader).</p><p>Step 5 - Temporal Stasis:
-Reduce thermal energy input to its minimum non-zero value and apply the lid to the pan, creating a closed thermodynamic system. Allow 0.000038 years to pass, or approximately 1,200,000,000,000 atomic vibrations of a cesium-133 atom, whichever comes first. Do not open the lid. Do not think about opening the lid. The sauce is fine. </p>
-<h3>Instructions For Dough: </h3><p>Step 1 - Flour Volcano Construction:
-Distribute 12,484 grains of durum wheat flour across a flat surface in a geometrically precise volcanic formation. Deposit 283.5 grams of egg matter and 12,000 uS/cm worth of salt into the caldera. Agitate the egg matter within the crater until homogeneous, then incrementally collapse the flour walls inward using a controlled avalanche technique. Once all 12,484 grains have been incorporated, apply repeated compressive and stretching forces to the dough mass using your hands until the gluten network has reached a satisfactory topological state.
-</p><p>Step 2 - Cryogenic Resting Period:
-Encase the resulting mass in a petroleum-derived polymer film and subject it to refrigeration for 0.000038 years.
-</p><h3>Instructions For Assembly: </h3><p>Step 1 - Baking Dish Preparation: Preheat thermal chamber to an air molecule average velocity of 576 meters per second.
-Apply a thin layer of lipid solution to a small rectangular heat-resistant baking dish. Introduce a geometrically uniform layer of dough across the base of the baking dish, ensuring full surface coverage with minimal deviation from planarity.</p><p>Step 2 - Layering Protocol:
-Cover the dough layer with a spatially complete distribution of bovine-tomato compound, ensuring no dough surface remains exposed. Deposit small chunks of 6.022x10^23 atoms of cheese at irregular intervals across the sauce layer. Repeat the dough-sauce-cheese sequence until the baking dish has reached maximum capacity. The final layer must terminate with dough. There is no negotiation on this point.</p><p>Step 3 - Foil Encapsulation and Thermal Processing Phase 1:
-Encase the baking dish in a sheet of metallic aluminum polymer and introduce it into a preheated thermal chamber. Subject to 0.000019 years of thermal radiation.</p><p>Step 4 - Foil Removal and Thermal Processing Phase 2:
-Remove the aluminum encapsulation and return the baking dish to the thermal chamber for an additional 0.000019 to 0.000028 years, or until the 6.022x10^23 atoms of cheese have reached a satisfactory molten and visually appealing state.</p><p>Step 5 - Consumption:
-Serve to a number of individuals proportional to their respective hunger levels. Rating: pretty good (by author).</p>
+  .page {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 60px 40px 80px;
+    position: relative;
+  }
+
+  .page::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 28px,
+        rgba(107, 76, 42, 0.04) 28px,
+        rgba(107, 76, 42, 0.04) 29px
+      );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .content { position: relative; z-index: 1; }
+
+  .header {
+    text-align: center;
+    border-top: 3px double var(--brown);
+    border-bottom: 3px double var(--brown);
+    padding: 32px 20px;
+    margin-bottom: 40px;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--dark);
+    margin-bottom: 16px;
+  }
+
+  .meta {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--brown);
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .meta span::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+
+  .divider {
+    text-align: center;
+    color: var(--gold);
+    font-size: 1.2rem;
+    letter-spacing: 8px;
+    margin: 36px 0;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--rust);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-style: normal;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--light-brown);
+  }
+
+  .ingredients-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 8px;
+  }
+
+  .ingredient-group h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--brown);
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+  }
+
+  .ingredient-group.full-width {
+    grid-column: 1 / -1;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  ul li {
+    padding: 5px 0 5px 20px;
+    position: relative;
+    font-size: 0.95rem;
+    border-bottom: 1px dotted rgba(107, 76, 42, 0.2);
+  }
+
+  ul li:last-child { border-bottom: none; }
+
+  ul li::before {
+    content: '-';
+    position: absolute;
+    left: 4px;
+    color: var(--gold);
+    font-weight: bold;
+  }
+
+  .instructions-section { margin-top: 8px; }
+
+  .step {
+    margin-bottom: 28px;
+    padding-left: 48px;
+    position: relative;
+  }
+
+  .step-number {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--light-brown);
+    line-height: 1;
+    width: 36px;
+    text-align: right;
+  }
+
+  .step-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--brown);
+    margin-bottom: 4px;
+    font-style: italic;
+  }
+
+  .step p {
+    font-size: 0.95rem;
+    color: #2a201a;
+  }
+
+  .footnote {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--light-brown);
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--brown);
+    text-align: center;
+  }
+
+  .ornament {
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--gold);
+    margin: 8px 0;
+    letter-spacing: 4px;
+  }
+
+  @media (max-width: 600px) {
+    .ingredients-grid { grid-template-columns: 1fr; }
+    h1 { font-size: 1.9rem; }
+    .page { padding: 40px 24px 60px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="content">
+
+    <div class="header">
+      <h1>This is a Pretty Good Lasagne Recipe</h1>
+      <div class="meta">
+        <span>Time: between 3 minutes and 253 years</span>
+        <span>Servings: depends on how much each person is hungry</span>
+        <span>Rating: pretty good (by author)</span>
+      </div>
+    </div>
+
+    <div class="ornament">- - -</div>
+
+    <p class="section-title">Ingredients</p>
+
+    <div class="ingredients-grid">
+      <div class="ingredient-group">
+        <h3>For the Dough</h3>
+        <ul>
+          <li>12,484 grains of durum wheat flour</li>
+          <li>283.5 grams of egg</li>
+          <li>12,000 microsiemens/cm in a clean liter of water worth of salt</li>
+        </ul>
+      </div>
+
+      <div class="ingredient-group">
+        <h3>For the Sauce</h3>
+        <ul>
+          <li>0.000096 cubic fathoms of ground beef</li>
+          <li>40 moles of tomato sauce</li>
+          <li>9.09 shekels of onion</li>
+          <li>0.175 minas of carrot</li>
+          <li>24,340,375,800,000,000,000,000,000,000 Zimbabwe dollars worth of celery</li>
+          <li>75 carats of wine</li>
+        </ul>
+      </div>
+
+      <div class="ingredient-group full-width">
+        <h3>For the Cheese Layer</h3>
+        <ul>
+          <li>60,221,407,600,000,000,000,000,000 atoms of hard yellow cheese</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider">* * *</div>
+
+    <div class="instructions-section">
+      <p class="section-title">Instructions for the Sauce</p>
+
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-title">Soffritto Initialization</div>
+        <p>Apply thermal energy to a pan until it reaches an unspecified temperature measurable in Rankine. Introduce a 3:1 molar ratio of canola to olive oil in a quantity sufficient to cover the surface area of your pan in a single monolayer of liquid. Introduce the 9.09 shekels of diced onion, 0.175 minas of carrot and 2.43 x 10^28 Zimbabwe dollars worth of celery root into the heated lipid solution. Agitate occasionally until the Maillard reaction has progressed to a visually satisfactory degree.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-title">Bovine Matter Integration</div>
+        <p>Introduce 0.000096 cubic fathoms of ground bovine matter into the pan incrementally, in chunks no larger than approximately 0.0000000043 cubic fathoms. Allow 0.00000000095 years to pass.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-title">Wine Deglazation</div>
+        <p>Add 75 carats of fermented grape solution and redistribute the 0.000096 cubic fathoms of bovine matter across the pan surface until all matter has completed the Maillard reaction.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-title">Sauce Assembly</div>
+        <p>Introduce 40 moles of tomato sauce. Season with 12,000 microsiemens/cm worth of salt, an unspecified quantity of pepper, and nutmeg to taste (amounts left as an exercise to the reader).</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">5</div>
+        <div class="step-title">Temporal Stasis</div>
+        <p>Reduce thermal energy input to its minimum non-zero value and apply the lid to the pan, creating a closed thermodynamic system. Allow 0.000038 years to pass. Do not open the lid. Do not think about opening the lid. The sauce is fine.</p>
+      </div>
+    </div>
+
+    <div class="divider">* * *</div>
+
+    <div class="instructions-section">
+      <p class="section-title">Instructions for the Dough</p>
+
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-title">Flour Volcano Construction</div>
+        <p>Distribute 12,484 grains of durum wheat flour across a flat surface in a geometrically precise volcanic formation. Deposit 283.5 grams of egg matter and 12,000 microsiemens/cm worth of salt into the caldera. Agitate the egg matter within the crater until homogeneous, then incrementally collapse the flour walls inward using a controlled avalanche technique. Once all 12,484 grains have been incorporated, apply repeated compressive and stretching forces to the dough mass using your hands until the gluten network has reached a satisfactory topological state.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-title">Cryogenic Resting Period</div>
+        <p>Encase the resulting mass in a petroleum-derived polymer film and subject it to refrigeration for 0.000038 years.</p>
+      </div>
+    </div>
+
+    <div class="divider">* * *</div>
+
+    <div class="instructions-section">
+      <p class="section-title">Instructions for Assembly</p>
+
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-title">Baking Dish Preparation</div>
+        <p>Preheat thermal chamber to an air molecule average velocity of 576 meters per second. Apply a thin layer of lipid solution to a small rectangular heat-resistant baking dish. Introduce a geometrically uniform layer of dough across the base of the baking dish, ensuring full surface coverage with minimal deviation from planarity.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-title">Layering Protocol</div>
+        <p>Cover the dough layer with a spatially complete distribution of bovine-tomato compound, ensuring no dough surface remains exposed. Deposit small chunks of 6.022 x 10^23 atoms of cheese at irregular intervals across the sauce layer. Repeat the dough-sauce-cheese sequence until the baking dish has reached maximum capacity. The final layer must terminate with dough. There is no negotiation on this point.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-title">Foil Encapsulation and Thermal Processing Phase 1</div>
+        <p>Encase the baking dish in a sheet of metallic aluminum polymer and introduce it into the preheated thermal chamber. Subject to 0.000019 years of thermal radiation.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-title">Foil Removal and Thermal Processing Phase 2</div>
+        <p>Remove the aluminum encapsulation and return the baking dish to the thermal chamber for an additional 0.000019 to 0.000028 years, or until the 6.022 x 10^23 atoms of cheese have reached a satisfactory molten and visually appealing state.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">5</div>
+        <div class="step-title">Consumption</div>
+        <p>Serve to a number of individuals proportional to their respective hunger levels.</p>
+      </div>
+    </div>
+
+    <div class="footnote">
+      Recipe authored and rated by the author. Results may vary depending on the size of the author's arm, the current exchange rate of the Zimbabwean dollar, and the availability of a sufficiently precise conductivity probe.
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
